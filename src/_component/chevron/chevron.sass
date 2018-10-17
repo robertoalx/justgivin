@@ -1,0 +1,32 @@
+$chevron-size: 50px
+$border-width: 5px
+
+.chevron
+  display: inline-block
+  // border: 0.1rem solid red
+  width: $chevron-size
+  height: $chevron-size
+  // position: relative
+  display: flex
+  align-items: center
+
+  &:after,
+  &:before
+    content: ''
+    flex-grow: 1
+    border: $border-width solid blue
+    transition: 0.5s
+
+  &:after
+    transform: skewY(60deg)
+
+  &:before
+    transform: skewY(-60deg)
+
+  &:hover:after
+    transform: skewY(-60deg)
+
+  &:hover:before
+    transform: skewY(60deg)
+
+
